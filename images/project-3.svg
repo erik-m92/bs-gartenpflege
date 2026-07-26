@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Platzhalterbild Garten">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0.4" y2="1">
+      <stop offset="0" stop-color="#6d8a4a"/>
+      <stop offset="1" stop-color="#2c4020"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#sky)"/>
+  <circle cx="520" cy="130" r="72" fill="#f0ead2" opacity="0.45"/>
+  <circle cx="520" cy="130" r="46" fill="#f0ead2" opacity="0.55"/>
+  <path d="M0 420 Q 200 330 420 400 T 800 380 L 800 600 L 0 600 Z" fill="#4d6b33" opacity="0.85"/>
+  <path d="M0 500 Q 260 420 520 480 T 800 460 L 800 600 L 0 600 Z" fill="#1d2c14"/>
+  <g fill="#c9e86b" opacity="0.7">
+    <path d="M170 430 q -26 -52 0 -96 q 26 44 0 96 Z"/>
+    <path d="M170 430 q -44 -18 -58 -62 q 46 8 58 62 Z"/>
+    <path d="M170 430 q 44 -18 58 -62 q -46 8 -58 62 Z"/>
+  </g>
+  <g fill="#eef2df" opacity="0.5">
+    <path d="M640 470 q -20 -40 0 -74 q 20 34 0 74 Z"/>
+    <path d="M640 470 q -34 -14 -44 -48 q 35 6 44 48 Z"/>
+    <path d="M640 470 q 34 -14 44 -48 q -35 6 -44 48 Z"/>
+  </g>
+</svg>

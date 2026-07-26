@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" role="img" aria-label="Platzhalter Teamfoto">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3f7d4e"/>
+      <stop offset="1" stop-color="#1c4a2b"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="600" fill="url(#bg)"/>
+  <circle cx="300" cy="235" r="95" fill="#f0ead2" opacity="0.9"/>
+  <path d="M300 360 c -110 0 -175 70 -185 240 l 370 0 c -10 -170 -75 -240 -185 -240 Z" fill="#f0ead2" opacity="0.9"/>
+  <g fill="#c9e86b" opacity="0.65">
+    <path d="M96 150 q -22 -44 0 -82 q 22 38 0 82 Z"/>
+    <path d="M96 150 q -37 -15 -49 -52 q 39 7 49 52 Z"/>
+  </g>
+</svg>

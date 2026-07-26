@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="Luftaufnahme eines gepflegten Gartens">
+  <defs>
+    <linearGradient id="lawn" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4e8c3f"/>
+      <stop offset="1" stop-color="#2c6130"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#lawn)"/>
+  <g stroke="#5d9c4a" stroke-width="90" fill="none" opacity="0.45">
+    <path d="M120 -20 q 50 460 -10 940"/>
+    <path d="M420 -20 q 60 460 -10 940"/>
+    <path d="M720 -20 q 50 460 -10 940"/>
+    <path d="M1020 -20 q 60 460 -10 940"/>
+    <path d="M1320 -20 q 50 460 -10 940"/>
+  </g>
+  <path d="M-80 760 C 320 700 470 470 560 300 C 640 150 820 70 1000 40 C 1120 20 1280 30 1420 -20" stroke="#ddd3b2" stroke-width="130" fill="none" stroke-linecap="round"/>
+  <path d="M-80 760 C 320 700 470 470 560 300 C 640 150 820 70 1000 40 C 1120 20 1280 30 1420 -20" stroke="#cfc39d" stroke-width="104" fill="none" stroke-linecap="round" opacity="0.7"/>
+  <g fill="#e8dfc2">
+    <circle cx="180" cy="726" r="26"/><circle cx="330" cy="682" r="26"/><circle cx="452" cy="580" r="26"/><circle cx="536" cy="452" r="26"/><circle cx="610" cy="322" r="26"/><circle cx="700" cy="212" r="26"/><circle cx="812" cy="130" r="26"/><circle cx="946" cy="80" r="26"/><circle cx="1090" cy="52" r="26"/>
+  </g>
+  <g>
+    <ellipse cx="1310" cy="640" rx="300" ry="200" fill="#1d4a24"/>
+    <circle cx="1210" cy="580" r="62" fill="#2c6130"/>
+    <circle cx="1330" cy="660" r="80" fill="#6d3f4e"/>
+    <circle cx="1440" cy="580" r="56" fill="#557d3f"/>
+    <circle cx="1280" cy="740" r="52" fill="#7fae4f"/>
+    <circle cx="1420" cy="710" r="44" fill="#2c6130"/>
+  </g>
+  <g>
+    <ellipse cx="240" cy="170" rx="230" ry="150" fill="#1d4a24"/>
+    <circle cx="150" cy="130" r="58" fill="#557d3f"/>
+    <circle cx="280" cy="190" r="66" fill="#2c6130"/>
+    <circle cx="360" cy="110" r="46" fill="#7fae4f"/>
+    <circle cx="120" cy="230" r="40" fill="#6d3f4e"/>
+  </g>
+  <g fill="#c9e86b" opacity="0.85">
+    <path d="M900 640 q -34 -66 0 -122 q 34 56 0 122 Z"/>
+    <path d="M900 640 q -56 -22 -74 -78 q 58 10 74 78 Z"/>
+    <path d="M900 640 q 56 -22 74 -78 q -58 10 -74 78 Z"/>
+  </g>
+</svg>
