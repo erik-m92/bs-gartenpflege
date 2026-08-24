@@ -290,6 +290,11 @@ a { color: var(--green); }
   color: var(--muted);
   margin-top: 5px;
 }
+.field .hint.field-error { color: var(--danger); font-weight: 600; }
+.field .hint code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: .95em;
+}
 input[type="text"],
 input[type="password"],
 input[type="file"],

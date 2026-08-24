@@ -33,7 +33,12 @@ if (!$isNew) {
 
 $errors = [];
 
-if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
+if (panel_post_exceeded_limit()) {
+    // PHP hat den kompletten Request verworfen – es gibt weder $_POST noch $_FILES.
+    $errors[] = 'Das Formular konnte nicht gesendet werden, weil die Daten zusammen zu groß waren'
+        . ' (Serverlimit post_max_size = ' . (string) ini_get('post_max_size') . ').'
+        . ' Bitte ein kleineres Bild wählen. Die zuletzt eingegebenen Texte mussten leider verworfen werden.';
+} elseif (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
     panel_csrf_verify();
 
     $project['title']            = trim((string) ($_POST['title'] ?? ''));
@@ -128,7 +133,9 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
     }
 }
 
-$images = panel_available_images();
+$images      = panel_available_images();
+$uploadLimit = panel_upload_limit_bytes();
+$limitLabel  = panel_format_bytes($uploadLimit);
 
 panel_header($isNew ? 'Neues Projekt' : 'Projekt bearbeiten');
 ?>
@@ -156,6 +163,8 @@ panel_header($isNew ? 'Neues Projekt' : 'Projekt bearbeiten');
 
   <form method="post" enctype="multipart/form-data">
     <?= panel_csrf_field() ?>
+    <?php /* Muss vor dem Datei-Feld stehen – PHP bricht damit zu große Uploads sauber ab. */ ?>
+    <input type="hidden" name="MAX_FILE_SIZE" value="<?= (int) $uploadLimit ?>">
 
     <div class="card">
       <div class="form-grid two">
@@ -199,8 +208,20 @@ panel_header($isNew ? 'Neues Projekt' : 'Projekt bearbeiten');
       <div class="form-grid two">
         <div class="field">
           <label for="image_file">Neues Bild hochladen</label>
-          <input type="file" id="image_file" name="image_file" accept="image/jpeg,image/png,image/webp">
-          <p class="hint">JPG, PNG oder WebP, maximal 5 MB. Empfohlen: 1200 × 900 Pixel (Verhältnis 4:3).</p>
+          <input type="file" id="image_file" name="image_file" accept="image/jpeg,image/png,image/webp"
+                 data-max-bytes="<?= (int) $uploadLimit ?>" data-max-label="<?= e($limitLabel) ?>">
+          <p class="hint field-error" id="image_file_error" role="alert" hidden></p>
+          <p class="hint">JPG, PNG oder WebP, maximal <?= e($limitLabel) ?>. Empfohlen: 1200 × 900 Pixel (Verhältnis 4:3).</p>
+          <?php if (panel_upload_limit_is_capped()): ?>
+            <p class="hint field-error">
+              Hinweis: Der Server erlaubt derzeit nur <?= e($limitLabel) ?> statt der vorgesehenen
+              <?= e(panel_format_bytes(PANEL_UPLOAD_MAX_BYTES)) ?>
+              (upload_max_filesize = <?= e((string) ini_get('upload_max_filesize')) ?>,
+              post_max_size = <?= e((string) ini_get('post_max_size')) ?>).
+              Die Werte stehen in <code>panel/.user.ini</code> bzw. <code>panel/.htaccess</code> –
+              greifen sie nicht, sperrt der Hoster das Überschreiben und muss die Limits selbst anheben.
+            </p>
+          <?php endif; ?>
         </div>
 
         <div class="field">

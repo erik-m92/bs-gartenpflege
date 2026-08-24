@@ -1,51 +1,15 @@
 {
-    "updated": "2026-07-26T18:12:37+00:00",
+    "updated": "2026-08-24T17:58:32+00:00",
     "projects": [
-        {
-            "id": "p-familiengarten",
-            "title": "Moderner Familiengarten",
-            "category": "Privatgarten",
-            "description": "Komplette Neugestaltung eines Reihenhausgartens: Rollrasen, pflegeleichte Staudenbeete, neue Terrasseneinfassung und ein kindersicherer Spielbereich.",
-            "home_description": "Ausgewogene Bepflanzung, klare Wege und effiziente Bewässerung schaffen einen Garten, der aufgeräumt und einladend wirkt.",
-            "image": "images/project-1.svg",
-            "image_alt": "Moderner Familiengarten mit Rasen und Beeten",
-            "icon": "sprout",
-            "featured": true,
-            "published": true
-        },
         {
             "id": "p-villengarten",
             "title": "Neugestaltung Villengarten",
             "category": "Gartengestaltung",
             "description": "Repräsentativer Garten mit Formgehölzen, automatischer Bewässerung und jahreszeitlich abgestimmter Bepflanzung.",
             "home_description": "Repräsentativer Garten mit Formgehölzen, automatischer Bewässerung und jahreszeitlich abgestimmter Bepflanzung.",
-            "image": "images/project-3.svg",
-            "image_alt": "Neu gestalteter Villengarten mit Formgehölzen",
+            "image": "images/projekte/20260824-73d95ca6f2a50dff.jpg",
+            "image_alt": "Test",
             "icon": "tree",
-            "featured": true,
-            "published": true
-        },
-        {
-            "id": "p-buerokomplex",
-            "title": "Außenanlage Bürokomplex",
-            "category": "Gewerbeobjekt",
-            "description": "Ganzjährige Grünanlagenpflege eines Firmengeländes: Rasenpflege, Heckenschnitt, Beetpflege und Winterdienst – alles aus einer Hand.",
-            "home_description": "Ein professionell gestaltetes Firmengelände, das den ersten Eindruck prägt – ganzjährig gepflegt inklusive Winterdienst.",
-            "image": "images/project-2.svg",
-            "image_alt": "Gepflegte Außenanlage eines Bürogebäudes",
-            "icon": "building",
-            "featured": true,
-            "published": true
-        },
-        {
-            "id": "p-wohnanlage",
-            "title": "Ganzjahrespflege Wohnanlage",
-            "category": "Objektbetreuung",
-            "description": "Komplette Außenanlagenbetreuung einer Wohnanlage mit mehreren Gebäuden – inklusive dokumentierter Einsätze für die Hausverwaltung.",
-            "home_description": "Komplette Landschaftspflege für eine große Wohnanlage – inklusive Rasenpflege und Bewässerungskontrolle.",
-            "image": "images/project-4.svg",
-            "image_alt": "Wohnanlage mit gepflegten Grünflächen",
-            "icon": "plant",
             "featured": true,
             "published": true
         },
@@ -58,7 +22,7 @@
             "image": "images/blog-2.svg",
             "image_alt": "Große Heckenanlage nach dem Formschnitt",
             "icon": "sprout",
-            "featured": false,
+            "featured": true,
             "published": true
         },
         {
@@ -70,7 +34,7 @@
             "image": "images/blog-3.svg",
             "image_alt": "Geräumtes und planiertes Grundstück",
             "icon": "tree",
-            "featured": false,
+            "featured": true,
             "published": true
         }
     ]

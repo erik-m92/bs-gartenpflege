@@ -1,0 +1,19 @@
+# PHP-Limits fuer das Admin-Panel, wenn PHP als Apache-Modul (mod_php) laeuft.
+# Bei FastCGI / PHP-FPM / LiteSpeed ignoriert Apache diese Zeilen - dort greift
+# die .user.ini in diesem Verzeichnis mit denselben Werten.
+#
+# Die IfModule-Klammern sind wichtig: ohne sie quittiert ein Server ohne mod_php
+# jeden Aufruf des Panels mit "500 Internal Server Error".
+
+<IfModule mod_php.c>
+  php_value upload_max_filesize 8M
+  php_value post_max_size 12M
+</IfModule>
+<IfModule mod_php7.c>
+  php_value upload_max_filesize 8M
+  php_value post_max_size 12M
+</IfModule>
+<IfModule mod_php5.c>
+  php_value upload_max_filesize 8M
+  php_value post_max_size 12M
+</IfModule>

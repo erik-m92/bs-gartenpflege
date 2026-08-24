@@ -20,18 +20,18 @@ function panel_handle_upload(array $file): array
         return ['ok' => false, 'error' => 'Keine Datei ausgewählt.'];
     }
     if ($code === UPLOAD_ERR_INI_SIZE || $code === UPLOAD_ERR_FORM_SIZE) {
-        return ['ok' => false, 'error' => 'Die Datei ist zu groß (maximal 5 MB).'];
+        return ['ok' => false, 'error' => panel_upload_too_large_message()];
     }
     if ($code !== UPLOAD_ERR_OK) {
-        return ['ok' => false, 'error' => 'Der Upload ist fehlgeschlagen (Fehlercode ' . (int) $code . ').'];
+        return ['ok' => false, 'error' => panel_upload_error_message((int) $code)];
     }
 
     $tmp = (string) ($file['tmp_name'] ?? '');
     if ($tmp === '' || !is_uploaded_file($tmp)) {
         return ['ok' => false, 'error' => 'Ungültiger Upload.'];
     }
-    if (($file['size'] ?? 0) > PANEL_UPLOAD_MAX_BYTES) {
-        return ['ok' => false, 'error' => 'Die Datei ist zu groß (maximal 5 MB).'];
+    if (($file['size'] ?? 0) > panel_upload_limit_bytes()) {
+        return ['ok' => false, 'error' => panel_upload_too_large_message()];
     }
 
     // Typ nicht aus dem Dateinamen oder den Browser-Angaben ableiten, sondern aus dem Inhalt.
@@ -39,19 +39,22 @@ function panel_handle_upload(array $file): array
     if ($info === false || empty($info['mime'])) {
         return ['ok' => false, 'error' => 'Die Datei ist kein gültiges Bild.'];
     }
-    $mime = (string) $info['mime'];
+    $mime = panel_normalize_mime((string) $info['mime']);
+    if ($mime === null) {
+        return ['ok' => false, 'error' => 'Nur JPG-, PNG- oder WebP-Bilder sind erlaubt.'];
+    }
     if (function_exists('finfo_open')) {
         $finfo = finfo_open(FILEINFO_MIME_TYPE);
         if ($finfo !== false) {
             $detected = (string) finfo_file($finfo, $tmp);
             finfo_close($finfo);
-            if ($detected !== $mime) {
+            // Beide Verfahren müssen denselben erlaubten Typ ergeben. Ein reiner
+            // String-Vergleich war zu streng: manche libmagic-Versionen melden
+            // z. B. image/pjpeg statt image/jpeg und verwarfen gültige Bilder.
+            if (panel_normalize_mime($detected) !== $mime) {
                 return ['ok' => false, 'error' => 'Der Dateityp konnte nicht eindeutig bestimmt werden.'];
             }
         }
-    }
-    if (!isset(PANEL_UPLOAD_TYPES[$mime])) {
-        return ['ok' => false, 'error' => 'Nur JPG-, PNG- oder WebP-Bilder sind erlaubt.'];
     }
 
     if (!is_dir(PROJECTS_UPLOADDIR) && !mkdir(PROJECTS_UPLOADDIR, 0755, true) && !is_dir(PROJECTS_UPLOADDIR)) {
@@ -67,6 +70,39 @@ function panel_handle_upload(array $file): array
     @chmod($target, 0644);
 
     return ['ok' => true, 'path' => PROJECTS_UPLOADURL . '/' . $name];
+}
+
+/**
+ * Führt bekannte Schreibweisen auf einen erlaubten Typ zurück.
+ * Gibt null zurück, wenn der Typ nicht erlaubt ist.
+ */
+function panel_normalize_mime(string $mime): ?string
+{
+    $mime = strtolower(trim($mime));
+    $aliases = [
+        'image/pjpeg' => 'image/jpeg',
+        'image/jpg'   => 'image/jpeg',
+        'image/x-png' => 'image/png',
+    ];
+    $mime = $aliases[$mime] ?? $mime;
+    return isset(PANEL_UPLOAD_TYPES[$mime]) ? $mime : null;
+}
+
+/** Verständlicher Text zu einem PHP-Upload-Fehlercode. */
+function panel_upload_error_message(int $code): string
+{
+    switch ($code) {
+        case UPLOAD_ERR_PARTIAL:
+            return 'Die Datei wurde nur teilweise übertragen. Bitte noch einmal versuchen.';
+        case UPLOAD_ERR_NO_TMP_DIR:
+            return 'Auf dem Server fehlt das temporäre Upload-Verzeichnis (PHP-Einstellung upload_tmp_dir).';
+        case UPLOAD_ERR_CANT_WRITE:
+            return 'Der Server konnte die Datei nicht auf die Festplatte schreiben (Schreibrechte prüfen).';
+        case UPLOAD_ERR_EXTENSION:
+            return 'Eine PHP-Erweiterung hat den Upload abgebrochen.';
+        default:
+            return 'Der Upload ist fehlgeschlagen (Fehlercode ' . $code . ').';
+    }
 }
 
 /** Legt im Upload-Ordner eine .htaccess an, die Skriptausführung unterbindet. */

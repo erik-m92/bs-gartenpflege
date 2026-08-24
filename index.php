@@ -1,3 +1,17 @@
+<?php
+/**
+ * Startseite.
+ *
+ * Die hervorgehobenen Projekte kommen aus data/projects.json und werden im
+ * Admin-Panel unter panel/ gepflegt (Häkchen „Auf der Startseite zeigen“).
+ */
+
+declare(strict_types=1);
+
+require_once __DIR__ . '/includes/projects.php';
+
+$featured = projects_featured(4);
+?>
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -19,7 +33,7 @@
   <!-- ================= Header ================= -->
   <header class="site-header">
     <div class="container header-inner">
-      <a href="index.html" class="logo" aria-label="BS-Gartenpflege – zur Startseite">
+      <a href="index.php" class="logo" aria-label="BS-Gartenpflege – zur Startseite">
         <span class="logo-mark" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
         </span>
@@ -28,7 +42,7 @@
 
       <nav class="main-nav" aria-label="Hauptnavigation">
         <ul>
-          <li><a href="index.html" aria-current="page">Start</a></li>
+          <li><a href="index.php" aria-current="page">Start</a></li>
           <li class="has-sub">
             <a href="leistungen.html" class="nav-toggle-sub">Leistungen
               <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
@@ -39,7 +53,7 @@
               <a href="leistungen.html#gewerbe">Gewerbe &amp; Objekte</a>
             </div>
           </li>
-          <li><a href="projekte.html">Projekte</a></li>
+          <li><a href="projekte.php">Projekte</a></li>
           <li><a href="preise.html">Preise</a></li>
           <li class="has-sub">
             <a href="ueber-uns.html" class="nav-toggle-sub">Unternehmen
@@ -68,7 +82,7 @@
   <!-- Mobile-Menü -->
   <div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigationsmenü">
     <div class="mobile-menu-head">
-      <a href="index.html" class="logo">
+      <a href="index.php" class="logo">
         <span class="logo-mark" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
         </span>
@@ -79,11 +93,11 @@
       </button>
     </div>
     <nav class="mobile-nav" aria-label="Mobile Navigation">
-      <a href="index.html">Start</a>
+      <a href="index.php">Start</a>
       <a href="leistungen.html">Leistungen</a>
       <a href="leistungen.html#privat" class="sub-link">→ Privatgärten</a>
       <a href="leistungen.html#gewerbe" class="sub-link">→ Gewerbe &amp; Objekte</a>
-      <a href="projekte.html">Projekte</a>
+      <a href="projekte.php">Projekte</a>
       <a href="preise.html">Preise</a>
       <a href="ueber-uns.html">Über uns</a>
       <a href="faq.html">Häufige Fragen</a>
@@ -102,7 +116,7 @@
           <div class="hero-content reveal">
             <h1>Professionelle Gartenpflege in Reutlingen</h1>
             <p class="lead">Wir betreuen Privatgärten, Wohnanlagen und Gewerbeobjekte – mit durchdachter Planung, sauberer Ausführung und langfristiger Pflege.</p>
-            <a href="projekte.html" class="btn btn-lime">
+            <a href="projekte.php" class="btn btn-lime">
               Unsere Projekte ansehen
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
             </a>
@@ -468,7 +482,7 @@
             <div class="prec-img reveal"><img src="images/team-2.svg" alt="Gärtnerin mit frisch bepflanzter Pflanzkiste" width="600" height="600"></div>
             <div class="prec-txt reveal">
               <p>Wir setzen auf Struktur, Disziplin und saubere Handwerksarbeit – damit Ihre Außenanlage auf jedem Niveau Professionalität ausstrahlt.</p>
-              <a href="projekte.html" class="btn btn-lime">
+              <a href="projekte.php" class="btn btn-lime">
                 Unsere Projekte ansehen
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
               </a>
@@ -528,6 +542,7 @@
     </section>
 
     <!-- ================= Projekte ================= -->
+    <?php if ($featured !== []): ?>
     <section aria-label="Ausgewählte Projekte">
       <div class="container">
         <div class="section-head center reveal">
@@ -535,69 +550,34 @@
           <h2>Gärten, die überzeugen &amp; Anlagen, die funktionieren.</h2>
         </div>
         <div class="proj-stack">
+          <?php foreach ($featured as $index => $project): ?>
           <article class="proj-row">
             <div class="proj-side">
-              <span class="proj-num">01</span>
-              <span class="proj-cat">Privatgarten</span>
+              <span class="proj-num"><?= str_pad((string) ($index + 1), 2, '0', STR_PAD_LEFT) ?></span>
+              <?php if ($project['category'] !== ''): ?>
+              <span class="proj-cat"><?= e($project['category']) ?></span>
+              <?php endif; ?>
             </div>
-            <div class="proj-img"><img src="images/project-1.svg" alt="Moderner Familiengarten mit Rasen und Beeten" width="800" height="600"></div>
+            <div class="proj-img">
+              <?php if ($project['image'] !== ''): ?>
+              <img src="<?= e($project['image']) ?>" alt="<?= e($project['image_alt']) ?>" width="800" height="600">
+              <?php endif; ?>
+            </div>
             <div class="proj-info">
-              <span class="proj-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="2"/><path d="M12 10v12"/><path d="M12 22c4.2 0 7-1.667 7-5-4.2 0-7 1.667-7 5Z"/><path d="M12 22c-4.2 0-7-1.667-7-5 4.2 0 7 1.667 7 5Z"/><path d="M12 5a3 3 0 1 1 3 3"/><path d="M12 5a3 3 0 1 0-3 3"/></svg></span>
-              <h3>Moderner Familiengarten</h3>
-              <p>Ausgewogene Bepflanzung, klare Wege und effiziente Bewässerung schaffen einen Garten, der aufgeräumt und einladend wirkt.</p>
+              <?php /* Feste Icon-Vorlage aus project_icons() – bewusst nicht escaped. */ ?>
+              <span class="proj-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><?= project_icon_svg($project['icon']) ?></svg></span>
+              <h3><?= e($project['title']) ?></h3>
+              <p><?= e($project['home_description'] !== '' ? $project['home_description'] : $project['description']) ?></p>
             </div>
-            <a href="projekte.html" class="proj-go" aria-label="Projekt ansehen">
+            <a href="projekte.php" class="proj-go" aria-label="Projekt ansehen">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
             </a>
           </article>
-          <article class="proj-row">
-            <div class="proj-side">
-              <span class="proj-num">02</span>
-              <span class="proj-cat">Gewerbeobjekt</span>
-            </div>
-            <div class="proj-img"><img src="images/project-2.svg" alt="Gepflegte Außenanlage eines Bürogebäudes" width="800" height="600"></div>
-            <div class="proj-info">
-              <span class="proj-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg></span>
-              <h3>Außenanlage Bürokomplex</h3>
-              <p>Ein professionell gestaltetes Firmengelände, das den ersten Eindruck prägt – ganzjährig gepflegt inklusive Winterdienst.</p>
-            </div>
-            <a href="projekte.html" class="proj-go" aria-label="Projekt ansehen">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
-            </a>
-          </article>
-          <article class="proj-row">
-            <div class="proj-side">
-              <span class="proj-num">03</span>
-              <span class="proj-cat">Gartengestaltung</span>
-            </div>
-            <div class="proj-img"><img src="images/project-3.svg" alt="Neu gestalteter Villengarten mit Formgehölzen" width="800" height="600"></div>
-            <div class="proj-info">
-              <span class="proj-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m17 14 3 3.3a1 1 0 0 1-.7 1.7H4.7a1 1 0 0 1-.7-1.7L7 14h-.3a1 1 0 0 1-.7-1.7L9 9h-.2A1 1 0 0 1 8 7.3L12 3l4 4.3a1 1 0 0 1-.8 1.7H15l3 3.3a1 1 0 0 1-.7 1.7H17Z"/><path d="M12 22v-3"/></svg></span>
-              <h3>Neugestaltung Villengarten</h3>
-              <p>Repräsentativer Garten mit Formgehölzen, automatischer Bewässerung und jahreszeitlich abgestimmter Bepflanzung.</p>
-            </div>
-            <a href="projekte.html" class="proj-go" aria-label="Projekt ansehen">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
-            </a>
-          </article>
-          <article class="proj-row">
-            <div class="proj-side">
-              <span class="proj-num">04</span>
-              <span class="proj-cat">Objektbetreuung</span>
-            </div>
-            <div class="proj-img"><img src="images/project-4.svg" alt="Wohnanlage mit gepflegten Grünflächen" width="800" height="600"></div>
-            <div class="proj-info">
-              <span class="proj-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 20h10"/><path d="M10 20c5.5-2.5.8-6.4 3-10"/><path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"/><path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"/></svg></span>
-              <h3>Ganzjahrespflege Wohnanlage</h3>
-              <p>Komplette Landschaftspflege für eine große Wohnanlage – inklusive Rasenpflege und Bewässerungskontrolle.</p>
-            </div>
-            <a href="projekte.html" class="proj-go" aria-label="Projekt ansehen">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
-            </a>
-          </article>
+          <?php endforeach; ?>
         </div>
       </div>
     </section>
+    <?php endif; ?>
 
     <!-- ================= Testimonials ================= -->
     <section aria-label="Kundenstimmen">
@@ -729,7 +709,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="index.html" class="logo">
+          <a href="index.php" class="logo">
             <span class="logo-mark" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
             </span>
@@ -759,7 +739,7 @@
           <h4>Unternehmen</h4>
           <ul class="footer-links">
             <li><a href="ueber-uns.html">Über uns</a></li>
-            <li><a href="projekte.html">Projekte</a></li>
+            <li><a href="projekte.php">Projekte</a></li>
             <li><a href="preise.html">Preise</a></li>
             <li><a href="faq.html">Häufige Fragen</a></li>
           </ul>
