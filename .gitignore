@@ -53,3 +53,10 @@ build/
 *.7z
 *.psd
 *.ai
+
+# Laufzeitdaten des Admin-Panels (nur auf dem Server, nie im Repo)
+data/users.php
+data/login-attempts.json
+data/projects.json
+!data/projects.example.json
+images/projekte/
