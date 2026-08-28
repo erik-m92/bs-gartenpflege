@@ -116,7 +116,9 @@ $projects = projects_load(true);
           <span aria-hidden="true">/</span>
           <span class="current">Projekte</span>
         </nav>
+        <!-- TODO [152] Seiten-Hero: Überschrift (H1) -->
         <h1>Projekte &amp; Referenzen</h1>
+        <!-- TODO [153] Seiten-Hero: Einleitungssatz -->
         <p class="lead">Eine Auswahl unserer Arbeiten aus Reutlingen und Umgebung – vom privaten Hausgarten bis zur ganzjährig betreuten Außenanlage. (Beispielprojekte – echte Referenzen &amp; Fotos folgen.)</p>
       </div>
     </div>
@@ -125,6 +127,7 @@ $projects = projects_load(true);
     <section aria-label="Projektübersicht">
       <div class="container">
         <?php if ($projects === []): ?>
+          <!-- TODO [154] Text, solange noch keine Projekte veröffentlicht sind -->
           <p class="lead">Zurzeit sind keine Projekte veröffentlicht. Schauen Sie bald wieder vorbei.</p>
         <?php else: ?>
         <div class="projects-grid">
@@ -142,6 +145,7 @@ $projects = projects_load(true);
               <div class="project-num"><?= str_pad((string) ($index + 1), 2, '0', STR_PAD_LEFT) ?></div>
               <h3><?= e($project['title']) ?></h3>
               <p><?= e($project['description']) ?></p>
+              <!-- TODO [155] Link-Beschriftung unter jeder Projektkarte -->
               <a href="kontakt.html" class="arrow-link">Ähnliches Projekt anfragen
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
               </a>
@@ -158,10 +162,13 @@ $projects = projects_load(true);
       <div class="container">
         <div class="cta-card reveal">
           <div>
+            <!-- TODO [156] CTA: Überschrift -->
             <h2>Ihr Projekt könnte das nächste sein.</h2>
+            <!-- TODO [157] CTA: Text -->
             <p>Erzählen Sie uns von Ihrem Garten oder Ihrer Außenanlage – wir melden uns innerhalb von 24 Stunden.</p>
           </div>
           <div class="cta-right">
+            <!-- TODO [158] CTA: Button-Beschriftung -->
             <a href="kontakt.html" class="btn btn-lime">
               Projekt anfragen
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>

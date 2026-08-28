@@ -1,0 +1,739 @@
+==================================================================
+ TEXT-INVENTAR — BS-GARTENPFLEGE
+ 158 Textstellen · Stand: 2026-08-28
+==================================================================
+
+So arbeitest du damit
+---------------------
+- Jede änderbare Textstelle hat eine eigene Nummer, z. B. [42].
+- Im Code steht direkt darüber ein Kommentar:   <!-- TODO [42] ... -->
+- In VS Code: Todo-Tree-Leiste öffnen -> Klick auf den Eintrag springt
+  genau an die Stelle im Code.
+- Unten steht zu jeder Nummer der aktuelle Text. Einfach überschreiben
+  oder den neuen Text darunter notieren.
+
+Erfasst sind die inhaltlichen Info-Texte der öffentlichen Seiten.
+NICHT erfasst (bewusst): Navigation, Footer, Kontaktformular,
+Öffnungszeiten, Impressum, Datenschutz und das Admin-Panel.
+
+Reihenfolge:  index.php [1-60] · leistungen.html [61-83] ·
+              preise.html [84-108] · ueber-uns.html [109-133] ·
+              faq.html [134-146] · kontakt.html [147-151] ·
+              projekte.php [152-158]
+
+
+##################################################################
+#  STARTSEITE — index.php            [1] – [60]
+##################################################################
+
+--- Hero ---------------------------------------------------------
+
+[1] Überschrift (H1)
+    Professionelle Gartenpflege in Reutlingen
+
+[2] Einleitungssatz
+    Wir betreuen Privatgärten, Wohnanlagen und Gewerbeobjekte – mit
+    durchdachter Planung, sauberer Ausführung und langfristiger Pflege.
+
+[3] Button
+    Unsere Projekte ansehen
+
+[4] Hinweis über der Bewertung
+    Basierend auf verifizierten Kundenbewertungen
+
+[5] Kundenzitat
+    „Unser Garten sah nie besser aus – professionell, gründlich und
+     immer pünktlich."
+
+[6] Bewertungszahl + Beschriftung
+    4.9 ★ — Durchschnittliche Kundenbewertung
+
+[7] Themen-Tags
+    Beliebte Themen · Gartenplanung · Grundstückspflege · Außenanlagen
+
+--- Zahlen & Fakten ----------------------------------------------
+
+[8] Kleine Überschrift (Eyebrow)
+    Zahlen & Fakten
+
+[9] Überschrift
+    Leistung, auf die Sie sich verlassen können.
+
+[10] Zitat
+    „Wir pflegen nicht nur Gärten – wir schaffen Außenanlagen, die mit
+     jeder Saison schöner werden. Vom Privatgarten bis zum großen
+     Gewerbeobjekt sprechen unsere Ergebnisse und langjährigen
+     Kundenbeziehungen für sich."
+
+[11] Statistik-Karte 1
+    15+ · Jahre Erfahrung
+    Professionelle Gartenpflege mit gleichbleibender Qualität und einem
+    geschulten Blick fürs Detail.
+
+[12] Statistik-Karte 2
+    350+ · Abgeschlossene Projekte
+    Privatgärten, Gewerbeflächen und öffentliche Anlagen – geplant,
+    gepflegt und präzise umgesetzt.
+
+[13] Statistik-Karte 3
+    98% · Kundenzufriedenheit
+    Unsere Kundinnen und Kunden bleiben, weil wir pünktlich sind, klar
+    kommunizieren und halten, was wir versprechen.
+
+--- Leistungen (Slider) ------------------------------------------
+
+[14] Kleine Überschrift (Eyebrow)
+    Komplette Gartenpflege für jedes Grundstück
+
+[15] Überschrift
+    Professionelle Leistungen für Privat & Gewerbe.
+
+[16] Tab-Beschriftung
+    Privatgärten
+
+[17] Tab-Beschriftung
+    Gewerbe & Objekte
+
+[18] Privat-Karte 1 — Rasenpflege
+    Mähen, Vertikutieren, Düngen und Nachsäen – für einen dichten,
+    gesunden Rasen das ganze Jahr.
+
+[19] Privat-Karte 2 — Hecken- & Formschnitt
+    Fachgerechter Schnitt zum richtigen Zeitpunkt – inklusive
+    Abtransport des Schnittguts.
+
+[20] Privat-Karte 3 — Baum- & Gehölzpflege
+    Schonender Rückschnitt für gesundes Wachstum, Sicherheit und eine
+    gepflegte Optik.
+
+[21] Privat-Karte 4 — Beetpflege & Bepflanzung
+    Standortgerechte, pflegeleichte Bepflanzung – passend zu jeder
+    Jahreszeit.
+
+[22] Privat-Karte 5 — Terrassen- & Wegepflege
+    Reinigung von Pflasterflächen, Entfernen von Wildwuchs und kleine
+    Ausbesserungen.
+
+[23] Privat-Karte 6 — Saisonale Gartenreinigung
+    Frühjahrsputz und Herbst-Laubaktion – inklusive
+    Grünschnitt-Entsorgung.
+
+[24] Gewerbe-Karte 1 — Grünanlagenpflege
+    Ganzjährige Pflege von Firmengeländen, Wohnanlagen und öffentlichen
+    Flächen.
+
+[25] Gewerbe-Karte 2 — Objektbetreuung
+    Fester Ansprechpartner und dokumentierte Einsätze für
+    Hausverwaltungen.
+
+[26] Gewerbe-Karte 3 — Gehölz- & Strauchschnitt
+    Termingerechter Schnitt großer Bestände inklusive vollständiger
+    Entsorgung.
+
+[27] Gewerbe-Karte 4 — Grundstücksräumung
+    Roden, räumen, entsorgen – wir übergeben eine saubere, nutzbare
+    Fläche.
+
+[28] Gewerbe-Karte 5 — Bewässerungslösungen
+    Beratung, Installation und Wartung automatischer
+    Bewässerungssysteme.
+
+[29] Gewerbe-Karte 6 — Winterdienst
+    Räumen und Streuen nach Plan – dokumentiert und verkehrssicher.
+
+[30] Button
+    Kostenlose Beratung sichern
+
+--- Wer wir sind -------------------------------------------------
+
+[31] Text im rotierenden Badge
+    Präzision · Erfahrung · Zuverlässigkeit ·
+
+[32] Kleine Überschrift (Eyebrow)
+    Wer wir sind
+
+[33] Überschrift
+    Gartenpflege mit Erfahrung & Sorgfalt.
+
+[34] Einleitungstext
+    Eine gepflegte Außenanlage entsteht nicht zufällig. Sie braucht
+    Planung, Verlässlichkeit und ein Team, das versteht, wie Gärten
+    wachsen und sich im Lauf der Jahreszeiten verändern.
+
+[35] Klapp-Punkt 1 — Erfahrenes Team
+    Ausgebildete Gärtner, die Pflanzengesundheit, Bodenverhältnisse und
+    langfristige Gartenplanung verstehen – und ihr Handwerk lieben.
+
+[36] Klapp-Punkt 2 — Verlässliche Termine
+    Wir kommen, wenn wir es sagen – mit festen Pflegeintervallen oder
+    flexiblen Einsätzen, ganz wie es zu Ihnen passt.
+
+[37] Klapp-Punkt 3 — Sorgfalt im Detail
+    Saubere Kanten, aufgeräumte Flächen, ordentlich entsorgtes
+    Schnittgut – wir gehen erst, wenn alles stimmt.
+
+[38] Klapp-Punkt 4 — Privat- & Gewerbe-Expertise
+    Vom Reihenhausgarten bis zur großen Außenanlage mit mehreren
+    Gebäuden – wir kennen die Anforderungen beider Welten.
+
+--- Präzision / Prozess ------------------------------------------
+
+[39] Kleine Überschrift (Eyebrow)
+    Ein höherer Anspruch an Gartenpflege
+
+[40] Überschrift
+    Wo Präzision auf dauerhafte Qualität trifft.
+
+[41] Text
+    Wir setzen auf Struktur, Disziplin und saubere Handwerksarbeit –
+    damit Ihre Außenanlage auf jedem Niveau Professionalität ausstrahlt.
+
+[42] Button
+    Unsere Projekte ansehen
+
+[43] Schritt 01 — Strategische Planung
+    Jedes Projekt beginnt mit einem klaren, durchdachten Plan und einer
+    Analyse vor Ort.
+
+[44] Schritt 02 — Präzise Ausführung
+    Saubere Kanten, ausgewogene Flächen und sorgfältig gepflegtes Grün
+    prägen unsere Arbeit.
+
+[45] Schritt 03 — Verlässliche Termine
+    Unsere organisierten Pflegepläne halten Ihr Grundstück dauerhaft in
+    Bestform.
+
+[46] Schritt 04 — Skalierbare Betreuung
+    Vom Privatgarten bis zum Gewerbeareal – unser Team wächst mit Ihren
+    Anforderungen.
+
+--- Ausgewählte Projekte -----------------------------------------
+
+[47] Kleine Überschrift (Eyebrow)
+    Ausgewählte Arbeiten
+
+[48] Überschrift
+    Gärten, die überzeugen & Anlagen, die funktionieren.
+    HINWEIS: Die Projekt-Kacheln darunter (Titel, Text, Bild) werden im
+    Admin-Panel gepflegt, nicht im Code.
+
+--- Kundenstimmen ------------------------------------------------
+
+[49] Google-Bewertungs-Badge
+    4,9 ★★★★★ — Google-Bewertungen
+
+[50] Kleine Überschrift (Eyebrow)
+    Kundenstimmen
+
+[51] Überschrift
+    Vertrauen von Eigentümern & Hausverwaltungen.
+
+[52] Einleitungstext
+    Von privaten Gärten bis zu großen Gewerbeflächen: Wir bauen auf
+    langfristige Partnerschaften – mit Verlässlichkeit, klarer
+    Kommunikation und konstanten Ergebnissen.
+
+[53] Bewertung 1 — Gartenbesitzerin · Sabine M. · Reutlingen
+    „Wir wollten einen Garten, der gepflegt aussieht, ohne ständige
+     Arbeit zu machen. Genau das hat das Team geliefert – pünktlich,
+     freundlich und absolut ordentlich."
+
+[54] Bewertung 2 — Hausverwaltung · Thomas B. · Tübingen
+    „Als Hausverwaltung brauchen wir einen Partner, auf den wir uns
+     verlassen können. Die Einsätze werden sauber dokumentiert,
+     Absprachen werden eingehalten. So muss das sein."
+
+[55] Bewertung 3 — Eigenheimbesitzer · Familie K. · Pfullingen
+    „Unser Außenbereich ist wie verwandelt. Die Struktur stimmt, die
+     Pflanzen sind gesund und alles wirkt durchdacht gestaltet. Genau
+     der professionelle Look, den wir uns gewünscht haben."
+
+[56] Bewertung 4 — Facility Manager · Markus L. · Metzingen
+    „Unser Firmengelände wird ganzjährig gepflegt – inklusive
+     Winterdienst. Ein Ansprechpartner, faire Preise, null Ärger. Genau
+     das haben wir lange gesucht."
+
+--- Schluss-CTA --------------------------------------------------
+
+[57] Überschrift
+    Bereit für einen rundum gepflegten Garten?
+
+[58] Text
+    Ob Gewerbeobjekt oder privater Garten: Wir gestalten und pflegen
+    Außenanlagen, die professionell aussehen und das ganze Jahr
+    überzeugen.
+
+[59] Button
+    Kostenlose Beratung anfragen
+
+[60] Text vor den Social-Icons
+    Folgen Sie uns:
+
+
+##################################################################
+#  LEISTUNGEN — leistungen.html      [61] – [83]
+##################################################################
+
+[61] Überschrift (H1)
+    Unsere Leistungen
+
+[62] Einleitungssatz
+    Von der wöchentlichen Rasenpflege bis zur ganzjährigen
+    Objektbetreuung: Wir kümmern uns um Ihr Grün – zuverlässig,
+    fachgerecht und mit einem festen Ansprechpartner.
+
+--- Für Privatkunden ---------------------------------------------
+
+[63] Kleine Überschrift (Eyebrow)
+    Für Privatkunden
+
+[64] Überschrift
+    Rundum-Pflege für Ihren Privatgarten.
+
+[65] Einleitungstext
+    Ihr Garten soll Erholung sein, keine Arbeit. Wir übernehmen die
+    regelmäßige Pflege oder einzelne Aktionen – ganz so, wie es für Sie
+    passt.
+
+[66] Leistung 1 — Rasenpflege
+    Regelmäßiges Mähen, Vertikutieren, Düngen und Nachsäen. Auf Wunsch
+    mit festem Pflegeplan über die ganze Saison – für einen Rasen, der
+    dicht und sattgrün bleibt.
+
+[67] Leistung 2 — Hecken- & Formschnitt
+    Fachgerechter Schnitt zum richtigen Zeitpunkt – unter Beachtung der
+    gesetzlichen Schnittzeiten. Schnittgut nehmen wir selbstverständlich
+    mit.
+
+[68] Leistung 3 — Baum- & Gehölzpflege
+    Schonender Rückschnitt von Obstbäumen, Ziergehölzen und Sträuchern –
+    für gesundes Wachstum, mehr Licht und eine sichere, gepflegte
+    Anlage.
+
+[69] Leistung 4 — Beetpflege & Bepflanzung
+    Unkraut jäten, Boden lockern, mulchen und neu bepflanzen. Wir
+    beraten Sie zu standortgerechten, pflegeleichten Pflanzen für jede
+    Jahreszeit.
+
+[70] Leistung 5 — Terrassen- & Wegepflege
+    Reinigung von Pflaster- und Plattenflächen, Entfernen von Wildwuchs
+    in Fugen und kleinere Ausbesserungen an Wegen, Kanten und
+    Einfassungen.
+
+[71] Leistung 6 — Saisonale Gartenreinigung
+    Frühjahrsputz für den Saisonstart und große Laubaktion im Herbst –
+    inklusive Abfuhr und fachgerechter Entsorgung des Grünschnitts.
+
+--- Für Gewerbe & Hausverwaltungen -------------------------------
+
+[72] Kleine Überschrift (Eyebrow)
+    Für Gewerbe & Hausverwaltungen
+
+[73] Überschrift
+    Grünanlagen, die Ihr Objekt repräsentieren.
+
+[74] Einleitungstext
+    Gepflegte Außenanlagen sind die Visitenkarte Ihrer Immobilie. Wir
+    betreuen Firmengelände, Wohnanlagen und öffentliche Flächen –
+    planbar, dokumentiert und aus einer Hand.
+
+[75] Leistung 1 — Grünanlagenpflege
+    Regelmäßige Pflege aller Grünflächen: Rasen, Hecken, Beete und
+    Gehölze – in festen Intervallen und mit gleichbleibender Qualität.
+
+[76] Leistung 2 — Objektbetreuung
+    Die Rundum-Lösung für Hausverwaltungen: fester Ansprechpartner,
+    dokumentierte Einsätze und verlässliche Abrechnung – auch für
+    mehrere Liegenschaften.
+
+[77] Leistung 3 — Gehölz- & Strauchschnitt
+    Termingerechter Schnitt großer Bestände inklusive vollständiger
+    Entsorgung – geplant um Ihre Betriebsabläufe herum.
+
+[78] Leistung 4 — Grundstücksräumung
+    Verwilderte Grundstücke, Baufelder oder Nachlassobjekte: Wir roden,
+    räumen und übergeben eine saubere, nutzbare Fläche.
+
+[79] Leistung 5 — Bewässerungslösungen
+    Beratung, Installation und Wartung automatischer
+    Bewässerungssysteme – effizient, wassersparend und zuverlässig im
+    Betrieb.
+
+[80] Leistung 6 — Winterdienst
+    Räum- und Streudienst nach Einsatzplan mit lückenloser
+    Dokumentation – damit Sie Ihrer Verkehrssicherungspflicht sicher
+    nachkommen.
+
+--- CTA ----------------------------------------------------------
+
+[81] Überschrift
+    Nicht sicher, welche Leistung Sie brauchen?
+
+[82] Text
+    Kein Problem: Wir schauen uns Ihr Grundstück kostenlos an und
+    empfehlen Ihnen ehrlich, was wirklich sinnvoll ist.
+
+[83] Button
+    Kostenlose Beratung anfragen
+
+
+##################################################################
+#  PREISE — preise.html              [84] – [108]
+##################################################################
+
+[84] Überschrift (H1)
+    Preise & Pflegepakete
+
+[85] Einleitungssatz
+    Transparente Pakete für die regelmäßige Gartenpflege – oder ein
+    individuelles Angebot, exakt auf Ihr Grundstück zugeschnitten.
+    (Beispielpreise – finale Preise folgen.)
+
+--- Paket 1: Basispflege -----------------------------------------
+
+[86] Name + Beschreibung
+    Basispflege
+    Die Grundversorgung für einen dauerhaft ordentlichen Garten.
+
+[87] Preis
+    --- € / Monat*
+
+[88] Leistungspunkte (5)
+    Rasenmähen nach Pflegeplan
+    Kanten- & Randschnitt
+    Saisonale Düngung
+    Grundpflege der Beete
+    Monatlicher Gartencheck
+
+[89] Button
+    Paket anfragen
+
+--- Paket 2: Rundum-Sorglos (hervorgehoben) ----------------------
+
+[90] Badge-Text
+    Beliebtestes Paket
+
+[91] Name + Beschreibung
+    Rundum-Sorglos
+    Die Komplettpflege für Privatgärten und mittlere Anlagen.
+
+[92] Preis
+    --- € / Monat*
+
+[93] Leistungspunkte (5)
+    Komplette Rasenpflege inkl. Vertikutieren
+    Hecken- & Strauchschnitt
+    Beet- & Gehölzpflege
+    Saisonale Gartenreinigung (Frühjahr/Herbst)
+    Bevorzugte Terminvergabe
+
+[94] Button
+    Paket anfragen
+
+--- Paket 3: Gewerbe & Objekte -----------------------------------
+
+[95] Name + Beschreibung
+    Gewerbe & Objekte
+    Individuelle Betreuung für Firmen, Hausverwaltungen und große
+    Anlagen.
+
+[96] Preis
+    Individuell
+
+[97] Leistungspunkte (5)
+    Ganzjährige Grünanlagenpflege
+    Fester Ansprechpartner
+    Dokumentierte Einsätze
+    Winterdienst optional
+    Betreuung mehrerer Liegenschaften
+
+[98] Button
+    Angebot anfordern
+
+--- Rest ---------------------------------------------------------
+
+[99] Preis-Fußnote (*)
+    * Beispielpreise inkl. MwSt., abhängig von Grundstücksgröße und
+    Pflegeumfang. Der genaue Preis wird nach einer kostenlosen
+    Besichtigung als Festpreis vereinbart.
+
+[100] CTA — Überschrift
+    Bereit loszulegen?
+
+[101] CTA — Text
+    Vereinbaren Sie eine kostenlose Besichtigung – wir erstellen Ihnen
+    ein unverbindliches Festpreis-Angebot.
+
+[102] CTA — Button
+    Kostenlose Besichtigung anfragen
+
+[103] Paket-FAQ — Kleine Überschrift (Eyebrow)
+    Gut zu wissen
+
+[104] Paket-FAQ — Überschrift
+    Häufige Fragen zu unseren Paketen.
+
+[105] Paket-FAQ 1
+    F: Welches Paket passt zu meinem Garten?
+    A: Das hängt von Größe und Bepflanzung Ihres Grundstücks ab. Bei der
+       kostenlosen Besichtigung schauen wir uns alles an und empfehlen
+       ehrlich das Paket, das wirklich zu Ihrem Garten passt – ohne
+       Leistungen, die Sie nicht brauchen.
+
+[106] Paket-FAQ 2
+    F: Gibt es feste Vertragslaufzeiten?
+    A: Unsere Pflegepakete sind monatlich kündbar – wir überzeugen
+       lieber durch Leistung als durch lange Verträge. Für
+       Gewerbeobjekte vereinbaren wir die Laufzeit individuell, meist
+       saison- oder jahresweise.
+
+[107] Paket-FAQ 3
+    F: Kann ich ein Paket an meine Wünsche anpassen?
+    A: Ja, jedes Paket lässt sich erweitern oder reduzieren – zum
+       Beispiel um Baumschnitt, Bewässerungswartung oder
+       Terrassenreinigung. Sie zahlen nur, was Sie tatsächlich gebucht
+       haben.
+
+[108] Paket-FAQ 4
+    F: Was umfasst die saisonale Gartenreinigung genau?
+    A: Im Frühjahr: Beete säubern, Rückschnitt, Boden vorbereiten und
+       den Garten startklar machen. Im Herbst: Laub entfernen, Stauden
+       zurückschneiden und Pflanzen winterfest machen. Die Entsorgung
+       des Grünguts ist immer inklusive.
+
+
+##################################################################
+#  ÜBER UNS — ueber-uns.html         [109] – [133]
+##################################################################
+
+[109] Überschrift (H1)
+    Über uns
+
+[110] Einleitungssatz
+    BS-Gartenpflege steht für zuverlässige, handwerklich saubere
+    Gartenarbeit in Reutlingen und Umgebung – mit einem Team, das seinen
+    Beruf liebt.
+
+--- Wer wir sind -------------------------------------------------
+
+[111] Bild-Badge
+    15+ Jahre Erfahrung
+
+[112] Kleine Überschrift (Eyebrow)
+    Wer wir sind
+
+[113] Überschrift
+    Gewachsen aus Leidenschaft für gepflegtes Grün.
+
+[114] Absatz 1
+    Was als kleiner Ein-Mann-Betrieb begann, ist heute ein
+    eingespieltes Team mit moderner Technik und einem festen
+    Kundenstamm in der ganzen Region. Geblieben ist unser Anspruch:
+    Jeder Garten wird so gepflegt, als wäre es unser eigener.
+
+[115] Absatz 2
+    Wir arbeiten für private Gartenbesitzer genauso wie für
+    Hausverwaltungen und Unternehmen – immer persönlich, immer
+    verbindlich.
+
+[116] Merkmal 1 — Erfahrenes Team
+    Ausgebildete Gärtner mit Liebe zum Handwerk und geschultem Blick.
+
+[117] Merkmal 2 — Verlässliche Termine
+    Wir kommen, wenn wir es sagen – und melden uns, falls sich etwas
+    ändert.
+
+[118] Merkmal 3 — Sorgfalt im Detail
+    Saubere Kanten, aufgeräumte Flächen – wir gehen erst, wenn alles
+    stimmt.
+
+[119] Merkmal 4 — Privat & Gewerbe
+    Vom Hausgarten bis zur großen Außenanlage – wir kennen beide Welten.
+
+--- Zahlen & Fakten ----------------------------------------------
+
+[120] Kleine Überschrift (Eyebrow)
+    Zahlen & Fakten
+
+[121] Überschrift
+    Vertrauen, das über Jahre gewachsen ist.
+
+[122] Statistik-Karte 1
+    15+ · Jahre Erfahrung
+    Gewachsenes Know-how in Pflege, Schnitt und Gestaltung.
+
+[123] Statistik-Karte 2
+    350+ · Abgeschlossene Projekte
+    Vom kleinen Reihenhausgarten bis zur großen Außenanlage.
+
+[124] Statistik-Karte 3
+    98% · Kundenzufriedenheit
+    Unsere Kundinnen und Kunden bleiben – oft über viele Jahre.
+
+--- Team ---------------------------------------------------------
+
+[125] Kleine Überschrift (Eyebrow)
+    Unser Team
+
+[126] Überschrift
+    Die Menschen hinter BS-Gartenpflege.
+
+[127] Hinweistext
+    Platzhalter-Profile – echte Namen, Fotos und Funktionen folgen.
+
+[128] Teammitglied 1
+    Max Mustermann — Inhaber & Gartenbaumeister
+
+[129] Teammitglied 2
+    Erika Beispiel — Gartenpflege & Beetgestaltung
+
+[130] Teammitglied 3
+    Lukas Muster — Landschafts- & Objektpflege
+
+--- CTA ----------------------------------------------------------
+
+[131] Überschrift
+    Lernen Sie uns persönlich kennen.
+
+[132] Text
+    Am besten bei einem unverbindlichen Termin in Ihrem Garten – wir
+    freuen uns auf Sie.
+
+[133] Button
+    Termin vereinbaren
+
+
+##################################################################
+#  HÄUFIGE FRAGEN — faq.html         [134] – [146]
+##################################################################
+
+[134] Überschrift (H1)
+    Häufige Fragen
+
+[135] Einleitungssatz
+    Antworten auf die Fragen, die uns am häufigsten erreichen. Ihre
+    Frage ist nicht dabei? Rufen Sie uns einfach an oder schreiben Sie
+    uns.
+
+[136] FAQ 1
+    F: In welchem Gebiet sind Sie tätig?
+    A: Unser Kerngebiet ist Reutlingen mit allen Stadtteilen sowie die
+       nähere Umgebung – etwa Pfullingen, Eningen, Metzingen, Wannweil,
+       Kirchentellinsfurt und Tübingen. Bei größeren Projekten kommen
+       wir auch darüber hinaus – fragen Sie einfach an.
+
+[137] FAQ 2
+    F: Was kostet die Erstberatung?
+    A: Nichts. Die Besichtigung Ihres Grundstücks und das anschließende
+       Angebot sind kostenlos und unverbindlich. Sie entscheiden danach
+       in Ruhe, ob Sie uns beauftragen möchten.
+
+[138] FAQ 3
+    F: Erstellen Sie Festpreis-Angebote?
+    A: Ja. Nach der Besichtigung erhalten Sie ein schriftliches Angebot
+       mit Festpreis – keine versteckten Kosten, keine Überraschungen
+       auf der Rechnung.
+
+[139] FAQ 4
+    F: Entsorgen Sie den Grünschnitt?
+    A: Selbstverständlich. Abtransport und fachgerechte Entsorgung von
+       Schnittgut und Laub gehören bei uns zum Service – Ihr Grundstück
+       bleibt sauber zurück.
+
+[140] FAQ 5
+    F: Wann dürfen Hecken geschnitten werden?
+    A: Radikale Schnitte und das Roden von Hecken sind zum Schutz
+       brütender Vögel vom 1. März bis 30. September gesetzlich
+       untersagt. Schonende Form- und Pflegeschnitte sind ganzjährig
+       erlaubt – wir beraten Sie, was wann möglich ist.
+
+[141] FAQ 6
+    F: Muss ich bei den Arbeiten zu Hause sein?
+    A: Nein. Viele unserer Kundinnen und Kunden sind während der
+       Einsätze bei der Arbeit. Nach einer ersten gemeinsamen Begehung
+       arbeiten wir selbstständig – auf Wunsch mit kurzer Rückmeldung
+       nach jedem Einsatz.
+
+[142] FAQ 7
+    F: Sind Sie versichert?
+    A: Ja, wir verfügen über eine Betriebshaftpflichtversicherung.
+       Sollte trotz aller Sorgfalt einmal etwas passieren, sind Sie
+       vollständig abgesichert.
+
+[143] FAQ 8
+    F: Wie schnell bekomme ich einen Termin?
+    A: Auf Anfragen antworten wir in der Regel innerhalb von 24 Stunden.
+       Besichtigungstermine sind meist innerhalb einer Woche möglich; in
+       der Hauptsaison (Frühjahr) kann es etwas länger dauern.
+
+--- CTA ----------------------------------------------------------
+
+[144] Überschrift
+    Noch Fragen offen?
+
+[145] Text
+    Wir beantworten sie gern persönlich – schnell und unkompliziert.
+
+[146] Button
+    Jetzt Kontakt aufnehmen
+
+
+##################################################################
+#  KONTAKT — kontakt.html            [147] – [151]
+##################################################################
+
+[147] Überschrift (H1)
+    Kontakt
+
+[148] Einleitungssatz
+    Erzählen Sie uns von Ihrem Garten – wir melden uns innerhalb von
+    24 Stunden mit einer ehrlichen Einschätzung und einem
+    Terminvorschlag.
+
+[149] Infokarte — Überschrift
+    So erreichen Sie uns
+
+[150] Infokarte — Einleitungstext
+    Ob Anruf, E-Mail oder Formular – wir freuen uns auf Ihre Nachricht.
+    (Kontaktdaten sind Platzhalter – echte Daten folgen.)
+
+[151] Karten-Bereich — Hinweistext
+    Aus Datenschutzgründen binden wir keine Karte direkt ein.
+
+
+##################################################################
+#  PROJEKTE — projekte.php           [152] – [158]
+##################################################################
+
+[152] Überschrift (H1)
+    Projekte & Referenzen
+
+[153] Einleitungssatz
+    Eine Auswahl unserer Arbeiten aus Reutlingen und Umgebung – vom
+    privaten Hausgarten bis zur ganzjährig betreuten Außenanlage.
+    (Beispielprojekte – echte Referenzen & Fotos folgen.)
+
+[154] Text, solange keine Projekte veröffentlicht sind
+    Zurzeit sind keine Projekte veröffentlicht. Schauen Sie bald wieder
+    vorbei.
+
+[155] Link unter jeder Projektkarte
+    Ähnliches Projekt anfragen
+    HINWEIS: Titel, Beschreibung und Bild der Projekte selbst werden im
+    Admin-Panel gepflegt, nicht hier im Code.
+
+--- CTA ----------------------------------------------------------
+
+[156] Überschrift
+    Ihr Projekt könnte das nächste sein.
+
+[157] Text
+    Erzählen Sie uns von Ihrem Garten oder Ihrer Außenanlage – wir
+    melden uns innerhalb von 24 Stunden.
+
+[158] Button
+    Projekt anfragen
+
+==================================================================
+ ENDE — 158 Textstellen
+==================================================================

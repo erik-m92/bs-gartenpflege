@@ -114,8 +114,11 @@ $featured = projects_featured(4);
         <div class="hero-shell">
           <img class="hero-bg" src="images/hero-aerial.svg" alt="Luftaufnahme eines professionell gepflegten Gartens" width="1600" height="900">
           <div class="hero-content reveal">
+            <!-- TODO [1] Hero: Überschrift (H1) -->
             <h1>Professionelle Gartenpflege in Reutlingen</h1>
+            <!-- TODO [2] Hero: Einleitungssatz -->
             <p class="lead">Wir betreuen Privatgärten, Wohnanlagen und Gewerbeobjekte – mit durchdachter Planung, sauberer Ausführung und langfristiger Pflege.</p>
+            <!-- TODO [3] Hero: Button-Beschriftung -->
             <a href="projekte.php" class="btn btn-lime">
               Unsere Projekte ansehen
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
@@ -127,9 +130,12 @@ $featured = projects_featured(4);
               <div class="hr-avatars" aria-hidden="true">
                 <span>SM</span><span>TB</span><span>ML</span>
               </div>
+              <!-- TODO [4] Hero: Hinweis über der Bewertung -->
               <small>Basierend auf verifizierten Kundenbewertungen</small>
             </div>
+            <!-- TODO [5] Hero: Kundenzitat -->
             <p class="hr-quote">„Unser Garten sah nie besser aus – professionell, gründlich und immer pünktlich."</p>
+            <!-- TODO [6] Hero: Bewertungszahl + Beschriftung darunter -->
             <div class="hr-score">
               <span class="num" data-count="4.9" data-decimals="1">0</span>
               <span class="hr-star" aria-hidden="true">★</span>
@@ -137,6 +143,7 @@ $featured = projects_featured(4);
             </div>
           </aside>
 
+          <!-- TODO [7] Hero: Themen-Tags (Label + 3 Schlagworte) -->
           <div class="hero-tags">
             <span class="ht-label">Beliebte Themen</span>
             <span class="pill">Gartenplanung</span>
@@ -152,12 +159,16 @@ $featured = projects_featured(4);
       <div class="container">
         <div class="stats-head">
           <div class="reveal">
+            <!-- TODO [8] Zahlen & Fakten: Kleine Überschrift (Eyebrow) -->
             <span class="eyebrow">Zahlen &amp; Fakten</span>
+            <!-- TODO [9] Zahlen & Fakten: Überschrift -->
             <h2>Leistung, auf die Sie sich verlassen können.</h2>
           </div>
+          <!-- TODO [10] Zahlen & Fakten: Zitat -->
           <p class="stats-quote reveal">„Wir pflegen nicht nur Gärten – wir schaffen Außenanlagen, die mit jeder Saison schöner werden. Vom Privatgarten bis zum großen Gewerbeobjekt sprechen unsere Ergebnisse und langjährigen Kundenbeziehungen für sich."</p>
         </div>
         <div class="stats-grid">
+          <!-- TODO [11] Statistik-Karte 1 (15+ Jahre Erfahrung): Wert, Beschriftung, Text -->
           <div class="stat-card reveal">
             <div class="stat-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
@@ -166,6 +177,7 @@ $featured = projects_featured(4);
             <div class="stat-label">Jahre Erfahrung</div>
             <p>Professionelle Gartenpflege mit gleichbleibender Qualität und einem geschulten Blick fürs Detail.</p>
           </div>
+          <!-- TODO [12] Statistik-Karte 2 (350+ Projekte): Wert, Beschriftung, Text -->
           <div class="stat-card reveal">
             <div class="stat-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
@@ -174,6 +186,7 @@ $featured = projects_featured(4);
             <div class="stat-label">Abgeschlossene Projekte</div>
             <p>Privatgärten, Gewerbeflächen und öffentliche Anlagen – geplant, gepflegt und präzise umgesetzt.</p>
           </div>
+          <!-- TODO [13] Statistik-Karte 3 (98% Zufriedenheit): Wert, Beschriftung, Text -->
           <div class="stat-card reveal">
             <div class="stat-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 10v12"/><path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2a3.13 3.13 0 0 1 3 3.88Z"/></svg>
@@ -191,15 +204,19 @@ $featured = projects_featured(4);
       <div class="container">
         <div class="svc-shell">
           <div class="section-head center reveal">
+            <!-- TODO [14] Leistungen: Kleine Überschrift (Eyebrow) -->
             <span class="eyebrow">Komplette Gartenpflege für jedes Grundstück</span>
+            <!-- TODO [15] Leistungen: Überschrift -->
             <h2>Professionelle Leistungen für Privat &amp; Gewerbe.</h2>
           </div>
 
           <div class="tabs" role="tablist" aria-label="Leistungsbereiche">
+            <!-- TODO [16] Leistungen: Tab-Beschriftung „Privatgärten“ -->
             <button class="tab-btn" role="tab" id="tab-privat" aria-controls="panel-privat" aria-selected="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
               Privatgärten
             </button>
+            <!-- TODO [17] Leistungen: Tab-Beschriftung „Gewerbe & Objekte“ -->
             <button class="tab-btn" role="tab" id="tab-gewerbe" aria-controls="panel-gewerbe" aria-selected="false" tabindex="-1">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg>
               Gewerbe &amp; Objekte
@@ -213,6 +230,7 @@ $featured = projects_featured(4);
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
               </button>
               <div class="svc-track">
+                <!-- TODO [18] Privat-Karte 1 – Rasenpflege: Titel + Text -->
                 <article class="svc-card">
                   <img src="images/project-1.svg" alt="Sattgrüner, frisch gemähter Rasen" width="800" height="600">
                   <a class="svc-arrow" href="leistungen.html#privat" aria-label="Mehr zur Rasenpflege">
@@ -226,6 +244,7 @@ $featured = projects_featured(4);
                     <p>Mähen, Vertikutieren, Düngen und Nachsäen – für einen dichten, gesunden Rasen das ganze Jahr.</p>
                   </div>
                 </article>
+                <!-- TODO [19] Privat-Karte 2 – Hecken- & Formschnitt: Titel + Text -->
                 <article class="svc-card">
                   <img src="images/blog-2.svg" alt="Präzise geschnittene Hecke" width="800" height="600">
                   <a class="svc-arrow" href="leistungen.html#privat" aria-label="Mehr zum Heckenschnitt">
@@ -239,6 +258,7 @@ $featured = projects_featured(4);
                     <p>Fachgerechter Schnitt zum richtigen Zeitpunkt – inklusive Abtransport des Schnittguts.</p>
                   </div>
                 </article>
+                <!-- TODO [20] Privat-Karte 3 – Baum- & Gehölzpflege: Titel + Text -->
                 <article class="svc-card">
                   <img src="images/project-3.svg" alt="Gepflegte Bäume und Sträucher" width="800" height="600">
                   <a class="svc-arrow" href="leistungen.html#privat" aria-label="Mehr zur Baumpflege">
@@ -252,6 +272,7 @@ $featured = projects_featured(4);
                     <p>Schonender Rückschnitt für gesundes Wachstum, Sicherheit und eine gepflegte Optik.</p>
                   </div>
                 </article>
+                <!-- TODO [21] Privat-Karte 4 – Beetpflege & Bepflanzung: Titel + Text -->
                 <article class="svc-card">
                   <img src="images/blog-1.svg" alt="Frisch bepflanztes Staudenbeet" width="800" height="600">
                   <a class="svc-arrow" href="leistungen.html#privat" aria-label="Mehr zur Beetpflege">
@@ -265,6 +286,7 @@ $featured = projects_featured(4);
                     <p>Standortgerechte, pflegeleichte Bepflanzung – passend zu jeder Jahreszeit.</p>
                   </div>
                 </article>
+                <!-- TODO [22] Privat-Karte 5 – Terrassen- & Wegepflege: Titel + Text -->
                 <article class="svc-card">
                   <img src="images/project-4.svg" alt="Gereinigte Terrasse mit Pflasterfläche" width="800" height="600">
                   <a class="svc-arrow" href="leistungen.html#privat" aria-label="Mehr zur Terrassenpflege">
@@ -278,6 +300,7 @@ $featured = projects_featured(4);
                     <p>Reinigung von Pflasterflächen, Entfernen von Wildwuchs und kleine Ausbesserungen.</p>
                   </div>
                 </article>
+                <!-- TODO [23] Privat-Karte 6 – Saisonale Gartenreinigung: Titel + Text -->
                 <article class="svc-card">
                   <img src="images/blog-3.svg" alt="Herbstlicher Garten bei der Laubaktion" width="800" height="600">
                   <a class="svc-arrow" href="leistungen.html#privat" aria-label="Mehr zur saisonalen Gartenreinigung">
@@ -306,6 +329,7 @@ $featured = projects_featured(4);
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
               </button>
               <div class="svc-track">
+                <!-- TODO [24] Gewerbe-Karte 1 – Grünanlagenpflege: Titel + Text -->
                 <article class="svc-card">
                   <img src="images/project-2.svg" alt="Außenanlage eines Bürogebäudes" width="800" height="600">
                   <a class="svc-arrow" href="leistungen.html#gewerbe" aria-label="Mehr zur Grünanlagenpflege">
@@ -319,6 +343,7 @@ $featured = projects_featured(4);
                     <p>Ganzjährige Pflege von Firmengeländen, Wohnanlagen und öffentlichen Flächen.</p>
                   </div>
                 </article>
+                <!-- TODO [25] Gewerbe-Karte 2 – Objektbetreuung: Titel + Text -->
                 <article class="svc-card">
                   <img src="images/hero-2.svg" alt="Objektbetreuung einer Wohnanlage" width="800" height="600">
                   <a class="svc-arrow" href="leistungen.html#gewerbe" aria-label="Mehr zur Objektbetreuung">
@@ -332,6 +357,7 @@ $featured = projects_featured(4);
                     <p>Fester Ansprechpartner und dokumentierte Einsätze für Hausverwaltungen.</p>
                   </div>
                 </article>
+                <!-- TODO [26] Gewerbe-Karte 3 – Gehölz- & Strauchschnitt: Titel + Text -->
                 <article class="svc-card">
                   <img src="images/blog-2.svg" alt="Strauchschnitt an einer großen Heckenanlage" width="800" height="600">
                   <a class="svc-arrow" href="leistungen.html#gewerbe" aria-label="Mehr zum Gehölzschnitt">
@@ -345,6 +371,7 @@ $featured = projects_featured(4);
                     <p>Termingerechter Schnitt großer Bestände inklusive vollständiger Entsorgung.</p>
                   </div>
                 </article>
+                <!-- TODO [27] Gewerbe-Karte 4 – Grundstücksräumung: Titel + Text -->
                 <article class="svc-card">
                   <img src="images/hero-3.svg" alt="Geräumtes Grundstück" width="800" height="600">
                   <a class="svc-arrow" href="leistungen.html#gewerbe" aria-label="Mehr zur Grundstücksräumung">
@@ -358,6 +385,7 @@ $featured = projects_featured(4);
                     <p>Roden, räumen, entsorgen – wir übergeben eine saubere, nutzbare Fläche.</p>
                   </div>
                 </article>
+                <!-- TODO [28] Gewerbe-Karte 5 – Bewässerungslösungen: Titel + Text -->
                 <article class="svc-card">
                   <img src="images/hero-1.svg" alt="Automatische Gartenbewässerung" width="800" height="600">
                   <a class="svc-arrow" href="leistungen.html#gewerbe" aria-label="Mehr zu Bewässerungslösungen">
@@ -371,6 +399,7 @@ $featured = projects_featured(4);
                     <p>Beratung, Installation und Wartung automatischer Bewässerungssysteme.</p>
                   </div>
                 </article>
+                <!-- TODO [29] Gewerbe-Karte 6 – Winterdienst: Titel + Text -->
                 <article class="svc-card">
                   <img src="images/about-2.svg" alt="Winterdienst auf einem Firmengelände" width="800" height="600">
                   <a class="svc-arrow" href="leistungen.html#gewerbe" aria-label="Mehr zum Winterdienst">
@@ -393,6 +422,7 @@ $featured = projects_featured(4);
           </div>
 
           <div class="services-cta reveal">
+            <!-- TODO [30] Leistungen: Button-Beschriftung -->
             <a href="kontakt.html" class="btn btn-lime">
               Kostenlose Beratung sichern
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
@@ -411,6 +441,7 @@ $featured = projects_featured(4);
               <defs>
                 <path id="badge-circle" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0"/>
               </defs>
+              <!-- TODO [31] Wer wir sind: Text im rotierenden Badge -->
               <text><textPath href="#badge-circle">Präzision · Erfahrung · Zuverlässigkeit ·</textPath></text>
             </svg>
             <span class="badge-leaf">
@@ -421,10 +452,14 @@ $featured = projects_featured(4);
           <div class="wwa-img w2"><img src="images/about-2.svg" alt="Team bei der Beetbepflanzung" width="600" height="800"></div>
         </div>
         <div class="reveal">
+          <!-- TODO [32] Wer wir sind: Kleine Überschrift (Eyebrow) -->
           <span class="eyebrow">Wer wir sind</span>
+          <!-- TODO [33] Wer wir sind: Überschrift -->
           <h2>Gartenpflege mit Erfahrung &amp; Sorgfalt.</h2>
+          <!-- TODO [34] Wer wir sind: Einleitungstext -->
           <p style="margin-top:1rem">Eine gepflegte Außenanlage entsteht nicht zufällig. Sie braucht Planung, Verlässlichkeit und ein Team, das versteht, wie Gärten wachsen und sich im Lauf der Jahreszeiten verändern.</p>
           <div class="wwa-acc">
+            <!-- TODO [35] Klapp-Punkt 1 – Erfahrenes Team: Titel + Text -->
             <details class="wwa-item" open>
               <summary>
                 <span class="wwa-check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
@@ -432,6 +467,7 @@ $featured = projects_featured(4);
               </summary>
               <div class="wwa-body"><p>Ausgebildete Gärtner, die Pflanzengesundheit, Bodenverhältnisse und langfristige Gartenplanung verstehen – und ihr Handwerk lieben.</p></div>
             </details>
+            <!-- TODO [36] Klapp-Punkt 2 – Verlässliche Termine: Titel + Text -->
             <details class="wwa-item">
               <summary>
                 <span class="wwa-check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
@@ -439,6 +475,7 @@ $featured = projects_featured(4);
               </summary>
               <div class="wwa-body"><p>Wir kommen, wenn wir es sagen – mit festen Pflegeintervallen oder flexiblen Einsätzen, ganz wie es zu Ihnen passt.</p></div>
             </details>
+            <!-- TODO [37] Klapp-Punkt 3 – Sorgfalt im Detail: Titel + Text -->
             <details class="wwa-item">
               <summary>
                 <span class="wwa-check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
@@ -446,6 +483,7 @@ $featured = projects_featured(4);
               </summary>
               <div class="wwa-body"><p>Saubere Kanten, aufgeräumte Flächen, ordentlich entsorgtes Schnittgut – wir gehen erst, wenn alles stimmt.</p></div>
             </details>
+            <!-- TODO [38] Klapp-Punkt 4 – Privat- & Gewerbe-Expertise: Titel + Text -->
             <details class="wwa-item">
               <summary>
                 <span class="wwa-check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
@@ -476,12 +514,16 @@ $featured = projects_featured(4);
         <div class="prec-shell">
           <div class="prec-top">
             <div class="reveal">
+              <!-- TODO [39] Prozess: Kleine Überschrift (Eyebrow) -->
               <span class="eyebrow">Ein höherer Anspruch an Gartenpflege</span>
+              <!-- TODO [40] Prozess: Überschrift -->
               <h2>Wo Präzision auf dauerhafte Qualität trifft.</h2>
             </div>
             <div class="prec-img reveal"><img src="images/team-2.svg" alt="Gärtnerin mit frisch bepflanzter Pflanzkiste" width="600" height="600"></div>
             <div class="prec-txt reveal">
+              <!-- TODO [41] Prozess: Text -->
               <p>Wir setzen auf Struktur, Disziplin und saubere Handwerksarbeit – damit Ihre Außenanlage auf jedem Niveau Professionalität ausstrahlt.</p>
+              <!-- TODO [42] Prozess: Button-Beschriftung -->
               <a href="projekte.php" class="btn btn-lime">
                 Unsere Projekte ansehen
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
@@ -490,6 +532,7 @@ $featured = projects_featured(4);
           </div>
           <div class="prec-steps">
             <div class="prec-col">
+              <!-- TODO [43] Prozess-Schritt 01 – Strategische Planung: Titel + Text -->
               <div class="prec-step reveal">
                 <span class="prec-check" aria-hidden="true">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
@@ -500,6 +543,7 @@ $featured = projects_featured(4);
                   <p>Jedes Projekt beginnt mit einem klaren, durchdachten Plan und einer Analyse vor Ort.</p>
                 </div>
               </div>
+              <!-- TODO [44] Prozess-Schritt 02 – Präzise Ausführung: Titel + Text -->
               <div class="prec-step reveal">
                 <span class="prec-check" aria-hidden="true">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
@@ -515,6 +559,7 @@ $featured = projects_featured(4);
               <div class="prec-center reveal"><img src="images/process.svg" alt="Detailaufnahme gepflegter Pflanzen" width="600" height="800"></div>
             </div>
             <div class="prec-col">
+              <!-- TODO [45] Prozess-Schritt 03 – Verlässliche Termine: Titel + Text -->
               <div class="prec-step reveal">
                 <span class="prec-check" aria-hidden="true">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
@@ -525,6 +570,7 @@ $featured = projects_featured(4);
                   <p>Unsere organisierten Pflegepläne halten Ihr Grundstück dauerhaft in Bestform.</p>
                 </div>
               </div>
+              <!-- TODO [46] Prozess-Schritt 04 – Skalierbare Betreuung: Titel + Text -->
               <div class="prec-step reveal">
                 <span class="prec-check" aria-hidden="true">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
@@ -546,7 +592,9 @@ $featured = projects_featured(4);
     <section aria-label="Ausgewählte Projekte">
       <div class="container">
         <div class="section-head center reveal">
+          <!-- TODO [47] Projekte: Kleine Überschrift (Eyebrow) -->
           <span class="eyebrow">Ausgewählte Arbeiten</span>
+          <!-- TODO [48] Projekte: Überschrift (die Projekt-Kacheln selbst kommen aus dem Admin-Panel) -->
           <h2>Gärten, die überzeugen &amp; Anlagen, die funktionieren.</h2>
         </div>
         <div class="proj-stack">
@@ -583,6 +631,7 @@ $featured = projects_featured(4);
     <section aria-label="Kundenstimmen">
       <div class="container testi-grid">
         <div class="testi-left reveal reveal-left">
+          <!-- TODO [49] Kundenstimmen: Google-Bewertungs-Badge -->
           <div class="g-badge">
             <span class="g-logo" aria-hidden="true">G</span>
             <div>
@@ -593,10 +642,14 @@ $featured = projects_featured(4);
           <div class="testi-img"><img src="images/about-1.svg" alt="Gärtner beim Rasenmähen zwischen Sträuchern" width="600" height="800"></div>
         </div>
         <div class="reveal">
+          <!-- TODO [50] Kundenstimmen: Kleine Überschrift (Eyebrow) -->
           <span class="eyebrow">Kundenstimmen</span>
+          <!-- TODO [51] Kundenstimmen: Überschrift -->
           <h2>Vertrauen von Eigentümern &amp; Hausverwaltungen.</h2>
+          <!-- TODO [52] Kundenstimmen: Einleitungstext -->
           <p style="margin-top:1rem;margin-bottom:1.8rem">Von privaten Gärten bis zu großen Gewerbeflächen: Wir bauen auf langfristige Partnerschaften – mit Verlässlichkeit, klarer Kommunikation und konstanten Ergebnissen.</p>
           <div class="slider" aria-label="Bewertungen unserer Kunden">
+            <!-- TODO [53] Bewertung 1 – Sabine M.: Rolle, Zitat, Name, Ort -->
             <div class="slide active">
               <div class="slide-top">
                 <span class="role"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/></svg>Gartenbesitzerin</span>
@@ -612,6 +665,7 @@ $featured = projects_featured(4);
               </div>
               <span class="quote-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M10 8c-3.3 0-6 2.7-6 6v2h5v-6H6.5C6.8 8.9 8.2 8 10 8Zm10 0c-3.3 0-6 2.7-6 6v2h5v-6h-2.5c.3-1.1 1.7-2 3.5-2Z"/></svg></span>
             </div>
+            <!-- TODO [54] Bewertung 2 – Thomas B.: Rolle, Zitat, Name, Ort -->
             <div class="slide">
               <div class="slide-top">
                 <span class="role"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg>Hausverwaltung</span>
@@ -627,6 +681,7 @@ $featured = projects_featured(4);
               </div>
               <span class="quote-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M10 8c-3.3 0-6 2.7-6 6v2h5v-6H6.5C6.8 8.9 8.2 8 10 8Zm10 0c-3.3 0-6 2.7-6 6v2h5v-6h-2.5c.3-1.1 1.7-2 3.5-2Z"/></svg></span>
             </div>
+            <!-- TODO [55] Bewertung 3 – Familie K.: Rolle, Zitat, Name, Ort -->
             <div class="slide">
               <div class="slide-top">
                 <span class="role"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>Eigenheimbesitzer</span>
@@ -642,6 +697,7 @@ $featured = projects_featured(4);
               </div>
               <span class="quote-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M10 8c-3.3 0-6 2.7-6 6v2h5v-6H6.5C6.8 8.9 8.2 8 10 8Zm10 0c-3.3 0-6 2.7-6 6v2h5v-6h-2.5c.3-1.1 1.7-2 3.5-2Z"/></svg></span>
             </div>
+            <!-- TODO [56] Bewertung 4 – Markus L.: Rolle, Zitat, Name, Ort -->
             <div class="slide">
               <div class="slide-top">
                 <span class="role"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></svg>Facility Manager</span>
@@ -676,13 +732,17 @@ $featured = projects_featured(4);
       <div class="container">
         <div class="cta-card reveal">
           <div class="cta-left">
+            <!-- TODO [57] Schluss-CTA: Überschrift -->
             <h2>Bereit für einen rundum gepflegten Garten?</h2>
+            <!-- TODO [58] Schluss-CTA: Text -->
             <p>Ob Gewerbeobjekt oder privater Garten: Wir gestalten und pflegen Außenanlagen, die professionell aussehen und das ganze Jahr überzeugen.</p>
+            <!-- TODO [59] Schluss-CTA: Button-Beschriftung -->
             <a href="kontakt.html" class="btn btn-lime">
               Kostenlose Beratung anfragen
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
             </a>
             <div class="cta-follow">
+              <!-- TODO [60] Schluss-CTA: Text „Folgen Sie uns:“ -->
               <span>Folgen Sie uns:</span>
               <div class="socials">
                 <a href="#" aria-label="Instagram (Link folgt)">
